@@ -2,6 +2,8 @@ export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
 
+  target: 'server',
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'app',
@@ -39,6 +41,10 @@ export default {
   modules: [
     '@nuxtjs/axios'
   ],
+
+    // public ENV
+  // Doc: https://nuxtjs.org/guide/runtime-config/
+  publicRuntimeConfig: {},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
