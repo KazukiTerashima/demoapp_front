@@ -68,6 +68,30 @@
           </v-card-text>
         </v-card>
       </v-card-text>
+      <v-card-title>
+        @nuxtjs/i18nの検証
+      </v-card-title>
+      <v-card-text>
+        <v-simple-table dence>
+          <template v-slot:default>
+            <thead>
+              <tr>
+                <td>en</td>
+                <td>ja</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                v-for="(lan, i) in ['signup', 'login']"
+                :key="`lan-${i}`"
+              >
+                <td>{{ lan }}</td>
+                <td>{{ $t(`title.${lan}`) }}</td>
+              </tr>
+            </tbody>
+          </template>
+        </v-simple-table>
+      </v-card-text>
     </v-card>
   </v-container>
 </template>
